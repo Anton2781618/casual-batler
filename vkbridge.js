@@ -76,7 +76,7 @@
         {
             console.log('Rewarded ad shown:', data);
             if (window.unityInstance) {
-                window.unityInstance.SendMessage('VKPlatformSDK', 'JSOnRewardedAdCompleted');
+                window.unityInstance.SendMessage('VKPlatformSDK', 'JSOnRewardedAdCompleted', JSON.stringify(data));
             }
         })
         .catch(function(error) 
